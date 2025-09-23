@@ -11,7 +11,8 @@
     box-sizing: border-box;
     width: calc(12.5% - 4px);
     height: calc(12.5% - 4px);
-    border: 2px solid blue;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid;
     margin: 2px;
 }
 .container-child:hover {

@@ -48,3 +48,18 @@ size.addEventListener('click', function() {
     }
 
 } )
+
+
+
+
+let color = document.querySelector('#color')
+color.addEventListener('click', function() {
+
+    let choice = prompt("Type your favorite color: ")
+    document.querySelectorAll('.container-child').style.backgroundColor = `${choice}`
+}
+)
+
+
+
+
