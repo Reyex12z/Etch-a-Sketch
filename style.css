@@ -31,14 +31,14 @@
     border-radius: 1em;
 }
 
-#size, #color, #clear, #custom{
+#size, #color, #clear, #custom, #random{
     padding: 1rem 2rem;
     border-radius: 0.35em;
     font-size: large;
     background-color: antiquewhite;
 }
 
-#size:hover, #color:hover, #clear:hover, #custom:hover{
+#size:hover, #color:hover, #clear:hover, #custom:hover, #random:hover{
     background-color: rgba(127, 245, 156, 0.973);
     scale: 1.09;
     color: white
