@@ -58,6 +58,24 @@ clear.addEventListener('click', function() {
         });
 })
 
+//custom color
+let cuCo='black';
+let custom = document.querySelector('#custom')
+custom.addEventListener('click', function() {
+
+    cuCo = prompt("Type your favorite color: ");
+    custom.textContent=`custom color: ${cuCo}`
+})
+
+
+
+div.addEventListener('click', function(event) {
+    // Check if the clicked element is a grid child
+    if (event.target.classList.contains('container-child')) {
+        event.target.style.backgroundColor = cuCo;
+    }
+});
+
 
 
 

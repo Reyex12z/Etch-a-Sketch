@@ -18,3 +18,28 @@
 .container-child:hover {
     background-color: black;
 }
+
+.hero {
+    display: flex;
+    margin: 5rem auto 1rem auto;
+    max-width: fit-content; 
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    background-color: #e2d3c3;
+    padding: 1rem;
+    border-radius: 1em;
+}
+
+#size, #color, #clear, #custom{
+    padding: 1rem 2rem;
+    border-radius: 0.35em;
+    font-size: large;
+    background-color: antiquewhite;
+}
+
+#size:hover, #color:hover, #clear:hover, #custom:hover{
+    background-color: rgba(127, 245, 156, 0.973);
+    scale: 1.09;
+    color: white
+}
