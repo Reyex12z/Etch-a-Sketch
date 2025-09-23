@@ -55,10 +55,22 @@ size.addEventListener('click', function() {
 let color = document.querySelector('#color')
 color.addEventListener('click', function() {
 
-    let choice = prompt("Type your favorite color: ")
-    document.querySelectorAll('.container-child').style.backgroundColor = `${choice}`
+    let choice = prompt("Type your favorite color: ");
+    let col = document.querySelectorAll('.container-child');
+    col.forEach(cell => {
+            cell.style.backgroundColor = choice;
+        });
 }
 )
+
+
+let clear = document.querySelector('#clear')
+clear.addEventListener('click', function() {
+    let cle = document.querySelectorAll('.container-child')
+    cle.forEach(cell => {
+            cell.style.backgroundColor = 'white';
+        });
+})
 
 
 
