@@ -1,21 +1,12 @@
 const div = document.querySelector('#container')
 
-
-// creating 16 x 16 grid
-for (let i = 0; i < 8; i++) {
-    for (let j = 0; j < 8; j++) {
-        let child = document.createElement('div')
-        child.classList.add('container-child')
-        div.appendChild(child)
-    }
+// creating 8 x 8 initiall grid
+for (let i = 0; i < 64; i++) {
+    
+    let child = document.createElement('div')
+    child.classList.add('container-child')
+    div.appendChild(child)
 }
-
-function deleteGrid() {
-    let parent = document.querySelector('#container')
-    parent.innerHTML=""
-}
-
-
 
 // user selected grid size trough event listener
 const size = document.querySelector('#size');
@@ -29,29 +20,25 @@ size.addEventListener('click', function() {
     }
 
     // deletes the existing grid
-    deleteGrid();
+    let parent = document.querySelector('#container')
+    parent.innerHTML=""
 
     // creates the new grid
-    for (let i = 0; i < num; i++) {
-        for (let j = 0; j < num; j++) {
-            let child = document.createElement('div')
-            child.classList.add('container-child')
-            
-            let portion = 100/num;
+    for (let i = 0; i < num * num; i++) {
 
-            console.log(portion, num)
+        let child = document.createElement('div')
+        child.classList.add('container-child')
+        
+        let portion = 100/num;
 
-            child.style.width=`calc(${portion}% - 4px)`;
-            child.style.height=`calc(${portion}% - 4px)`;
-            div.appendChild(child)
-        }
+        child.style.width=`calc(${portion}% - 4px)`;
+        child.style.height=`calc(${portion}% - 4px)`;
+        div.appendChild(child)
     }
 
 } )
 
-
-
-
+// color button
 let color = document.querySelector('#color')
 color.addEventListener('click', function() {
 
@@ -60,10 +47,9 @@ color.addEventListener('click', function() {
     col.forEach(cell => {
             cell.style.backgroundColor = choice;
         });
-}
-)
+})
 
-
+// clear button
 let clear = document.querySelector('#clear')
 clear.addEventListener('click', function() {
     let cle = document.querySelectorAll('.container-child')
