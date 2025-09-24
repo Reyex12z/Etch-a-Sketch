@@ -77,23 +77,43 @@ div.addEventListener('click', function(event) {
 });
 
 
+// random button
 
-// randomize
+// A global variable to track the "on" state
 let on = false;
-const random = document.querySelector('#random')
+
+// Get the random button
+const random = document.querySelector('#random');
+
+// Add a click listener to toggle the "on" state
 random.addEventListener('click', function() {
-
-    if (on === false) {
-        on = true;
-        random.textContent= 'Randomize: on'
+    on = !on; // Toggles 'on' between true and false
+    if (on) {
+        random.textContent = 'Randomize: on';
+    } else {
+        random.textContent = 'Randomize: off';
     }
+});
 
-    else if (on) {
-        on = false;
-        random.textContent= 'Randomize: off'
+// Get the main grid container
+const container = document.querySelector('#container'); // Assuming a parent container with id 'container'
+
+// Add a mouseover event listener to the parent container
+// This uses event delegation for better performance
+container.addEventListener('mouseover', function(e) {
+    // Only execute the function if randomization is "on"
+    if (on) {
+        // Check if the hovered element has the class 'container-child'
+        if (e.target.classList.contains('container-child')) {
+            e.target.style.backgroundColor = getRandomHexColor();
+        }
     }
-})
+});
 
+function getRandomHexColor() {
+    const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+    return "#" + randomColor.padStart(6, '0');
+}
 
 
 

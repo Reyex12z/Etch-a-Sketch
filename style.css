@@ -1,3 +1,7 @@
+body {
+    background-color: #f6f6f6;
+}
+
 .container {
     display: flex;
     flex-wrap: wrap;
@@ -21,12 +25,12 @@
 
 .hero {
     display: flex;
-    margin: 5rem auto 1rem auto;
+    margin: 2rem auto 1rem auto;
     max-width: fit-content; 
     justify-content: center;
     align-items: center;
     gap: 5rem;
-    background-color: #e2d3c3;
+    background-color: #f1ece6;
     padding: 1rem;
     border-radius: 1em;
 }
@@ -35,11 +39,12 @@
     padding: 1rem 2rem;
     border-radius: 0.35em;
     font-size: large;
-    background-color: antiquewhite;
+    background-color: rgba(177, 168, 159, 0.781);
+    color: rgb(255, 255, 255)
 }
 
 #size:hover, #color:hover, #clear:hover, #custom:hover, #random:hover{
-    background-color: rgba(127, 245, 156, 0.973);
+    background-color: rgba(233, 176, 20, 0.973);
     scale: 1.09;
     color: white
 }
