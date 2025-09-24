@@ -78,6 +78,23 @@ div.addEventListener('click', function(event) {
 
 
 
+// randomize
+let on = false;
+const random = document.querySelector('#random')
+random.addEventListener('click', function() {
+
+    if (on === false) {
+        on = true;
+        random.textContent= 'Randomize: on'
+    }
+
+    else if (on) {
+        on = false;
+        random.textContent= 'Randomize: off'
+    }
+})
+
+
 
 
 
